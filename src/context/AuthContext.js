@@ -1,4 +1,4 @@
-import { createContext, useState, useContext } from "react"; // ✅ useEffect removed
+import { createContext, useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 
 const AuthContext = createContext();
