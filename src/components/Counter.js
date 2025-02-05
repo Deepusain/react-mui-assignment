@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button, Typography, Box } from "@mui/material";
 import { animated, useSpring } from "react-spring";
-import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 
 const Counter = () => {
@@ -16,7 +15,7 @@ const Counter = () => {
         localStorage.setItem("counterValue", count);
     }, [count]);
 
-    // Background animation with smooth bezier curve
+    // Background animation 
     const backgroundAnimation = useSpring({
         backgroundColor: `rgba(0, 150, 136, ${count / 10})`,
         config: { tension: 180, friction: 22, clamp: true },
@@ -25,7 +24,7 @@ const Counter = () => {
     // Reset Function (Instant Reset Effect)
     const handleReset = () => {
         setCount(0);
-        localStorage.setItem("counterValue", "0"); // Reset localStorage
+        localStorage.setItem("counterValue", "0"); 
     };
 
     return (
